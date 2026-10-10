@@ -1,0 +1,59 @@
+owner_name: Dheepak
+timezone: America/New_York
+
+schedule:
+  morning_local_hour: 8        # send at/after 08:00 local
+  evening_local_hour: 18       # nudge at 18:xx local
+  sync_every_hours: 2
+
+languages:
+  block_size: 10
+  cycle: [cpp, python, java, java, python, cpp]   # 60-problem cycle, then repeats
+
+picker:
+  difficulty_by_weekday:       # Monday=0 ... Sunday=6, local date
+    0: Easy
+    1: Medium
+    2: Medium
+    3: Easy
+    4: Medium
+    5: Hard
+    6: Medium
+  core_patterns:               # LeetCode topic tag slugs
+    - array
+    - hash-table
+    - two-pointers
+    - sliding-window
+    - stack
+    - binary-search
+    - linked-list
+    - tree
+    - graph
+    - heap-priority-queue
+    - backtracking
+    - dynamic-programming
+    - greedy
+    - trie
+    - bit-manipulation
+  acrate_ranges:               # prefer problems inside these acceptance ranges
+    Easy: [45, 100]
+    Medium: [35, 75]
+    Hard: [0, 100]
+  problems_cache_days: 7
+
+llm:
+  provider: github_models
+  endpoint: https://models.github.ai/inference/chat/completions
+  models:                      # tried in order; verify IDs (see §0.5)
+    - deepseek/DeepSeek-V3-0324
+    - openai/gpt-4.1
+    - openai/gpt-4.1-mini
+  temperature: 0.2
+  max_retries_per_model: 2
+
+milestones:
+  solved_every: 50
+  streak_days: [7, 30, 50, 100]
+
+telegram:
+  reaction_on_solve: "💯"      # must be in Telegram's allowed reaction set (✅ is not)
