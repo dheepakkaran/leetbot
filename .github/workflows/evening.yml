@@ -2,8 +2,11 @@ name: evening
 
 on:
   schedule:
+    # 18:03 EDT / 17:03 EST, then retries before LeetCode's 00:00 UTC reset.
+    # The time gate in src/evening.py makes at most one of these nudge.
     - cron: "3 22 * * *"
     - cron: "3 23 * * *"
+    - cron: "33 23 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

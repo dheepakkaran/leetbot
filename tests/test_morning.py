@@ -13,20 +13,31 @@ TZ = ZoneInfo("America/New_York")
 
 
 def cron_times(day: str) -> list[datetime]:
+    """The morning.yml schedule: 12:17-16:17 UTC hourly."""
     y, m, d = map(int, day.split("-"))
-    return [datetime(y, m, d, 12, 17, tzinfo=timezone.utc), datetime(y, m, d, 13, 17, tzinfo=timezone.utc)]
+    return [datetime(y, m, d, hour, 17, tzinfo=timezone.utc) for hour in range(12, 17)]
 
 
-@pytest.mark.parametrize("day, sending_cron", [("2026-07-15", 0), ("2026-01-15", 1)])  # EDT, EST
-def test_exactly_one_cron_passes(day: str, sending_cron: int) -> None:
-    rows = []
-    passed = []
-    for i, now in enumerate(cron_times(day)):
+def runs_that_send(times: list[datetime]) -> list[int]:
+    rows, passed = [], []
+    for i, now in enumerate(times):
         ok, _ = morning_gate(now, TZ, 8, rows)
         if ok:
             passed.append(i)
             rows.append(make_row(1, now.date().isoformat()))  # the run that passes writes today's row
-    assert passed == [sending_cron]
+    return passed
+
+
+@pytest.mark.parametrize("day, sending_cron", [("2026-07-15", 0), ("2026-01-15", 1)])  # EDT, EST
+def test_exactly_one_cron_passes(day: str, sending_cron: int) -> None:
+    assert runs_that_send(cron_times(day)) == [sending_cron]
+
+
+@pytest.mark.parametrize("day", ["2026-07-15", "2026-01-15"])
+def test_dropped_scheduled_runs_are_retried(day: str) -> None:
+    times = cron_times(day)
+    # GitHub drops the first two runs: the next hourly retry still sends, exactly once.
+    assert runs_that_send(times[2:]) == [0]
 
 
 def test_est_early_cron_is_too_early() -> None:

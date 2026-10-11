@@ -2,9 +2,9 @@ owner_name: Dheepak
 timezone: America/New_York
 
 schedule:
-  morning_local_hour: 8        # send at/after 08:00 local
-  evening_local_hour: 18       # nudge at 18:xx local
-  sync_every_hours: 2
+  morning_local_hour: 8        # send at/after 08:00 local (later crons retry dropped runs)
+  evening_local_hour: 18       # nudge from 18:00 local until LeetCode's 00:00 UTC reset
+  sync_every_hours: 1
 
 languages:
   block_size: 10

@@ -14,10 +14,14 @@ from src.sync import run_sync
 
 
 def evening_gate(now: datetime, tz: Any, evening_hour: int, rows: list[LogRow]) -> tuple[bool, str]:
-    """Local hour == `evening_hour`, today's row exists, and no nudge sent yet."""
+    """At/after `evening_hour` local, today's UTC row exists, and no nudge sent yet.
+
+    "At or after" (not "during") so a delayed or retried cron still nudges. The
+    UTC-date row lookup ends the window at LeetCode's 00:00 UTC reset.
+    """
     local = now.astimezone(tz)
-    if local.hour != evening_hour:
-        return False, f"not evening: {local:%H:%M} local (want {evening_hour:02d}:xx)"
+    if local.hour < evening_hour:
+        return False, f"too early: {local:%H:%M} local < {evening_hour:02d}:00"
     row = latest_row_for_date(rows, now.date().isoformat())
     if row is None:
         return False, f"no row for {now.date().isoformat()}"

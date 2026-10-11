@@ -65,6 +65,8 @@ One line per judgment call, with the reason.
 - **Git identity:** set in each workflow with `git config` before running the job. Local non-dry runs use the developer's own identity.
 - **CI workflow:** added `.github/workflows/ci.yml` (beyond §13) to run `pytest -q` on every pull request and on pushes to `main`. Pushes that only touch bot data (`log.csv`, `data/`, solutions) are skipped.
 - **Dry-run messenger location:** `Messenger` and `DryRunMessenger` live in `telegram_client.py`, next to the real client, so `preview` doesn't depend on the job runtime.
+- **Retry crons:** GitHub dropped most scheduled runs on the repo's first day (morning didn't fire at all; sync ran 2 of ~8 times). Morning now fires hourly 12:17–16:17 UTC and evening at 22:03, 23:03 and 23:33 UTC; the time gates plus `log.csv` make only one of them act. Sync runs hourly.
+- **Evening gate is "at or after" 18:00:** the spec's `local hour == 18` would skip the nudge whenever GitHub delays the cron past 19:00. Today's-row-by-UTC-date already closes the window at LeetCode's reset (20:00 EDT / 19:00 EST).
 - **Action versions:** `actions/checkout@v5` and `actions/setup-python@v6` (current majors).
 - **Workflow inputs:** passed through `env:` instead of being interpolated into the shell script, to avoid script injection.
 

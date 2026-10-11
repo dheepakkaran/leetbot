@@ -2,8 +2,13 @@ name: morning
 
 on:
   schedule:
+    # 08:17 EDT / 07:17 EST, then hourly retries in case GitHub drops a scheduled run.
+    # The time gate in src/morning.py makes exactly one of these send.
     - cron: "17 12 * * *"
     - cron: "17 13 * * *"
+    - cron: "17 14 * * *"
+    - cron: "17 15 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
