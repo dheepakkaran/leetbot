@@ -39,11 +39,12 @@ def client(script: list[Any]) -> tuple[LeetCodeClient, Session, list[float]]:
 
 def test_headers_and_daily_parsing() -> None:
     body = {"data": {"activeDailyCodingChallengeQuestion": {"date": "2026-10-10", "link": "/problems/x/", "question": {
-        "questionFrontendId": "2333", "title": "T", "titleSlug": "x", "difficulty": "Medium", "isPaidOnly": False,
+        "questionFrontendId": "2333", "title": "  Trailing Space ", "titleSlug": "x", "difficulty": "Medium", "isPaidOnly": False,
         "topicTags": [{"name": "Array", "slug": "array"}]}}}}
     lc, session, _ = client([Resp(200, body)])
     daily = lc.get_daily()
     assert daily.question.frontend_id == "2333" and daily.question.tags[0].slug == "array"
+    assert daily.question.title == "Trailing Space"  # LeetCode titles can carry stray whitespace
     method, url, kw = session.calls[0]
     assert (method, url) == ("POST", "https://leetcode.com/graphql")
     assert kw["headers"]["Referer"] == "https://leetcode.com"

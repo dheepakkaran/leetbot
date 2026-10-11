@@ -252,7 +252,7 @@ class LeetCodeClient:
             link=d["link"],
             question=QuestionSummary(
                 frontend_id=str(q["questionFrontendId"]),
-                title=q["title"],
+                title=q["title"].strip(),
                 slug=q["titleSlug"],
                 difficulty=normalize_difficulty(q["difficulty"]),
                 paid_only=bool(q["isPaidOnly"]),
@@ -267,7 +267,7 @@ class LeetCodeClient:
             raise LeetCodeError(f"question not found: {slug}")
         return QuestionDetail(
             frontend_id=str(q["questionFrontendId"]),
-            title=q["title"],
+            title=q["title"].strip(),
             slug=q["titleSlug"],
             difficulty=normalize_difficulty(q["difficulty"]),
             paid_only=bool(q["isPaidOnly"]),
@@ -304,7 +304,7 @@ class LeetCodeClient:
         return [
             Problem(
                 frontend_id=str(q["questionFrontendId"]),
-                title=q["title"],
+                title=q["title"].strip(),
                 slug=q["titleSlug"],
                 difficulty=normalize_difficulty(q["difficulty"]),
                 ac_rate=round(float(q["acRate"] or 0.0), 2),
@@ -325,7 +325,7 @@ class LeetCodeClient:
                 problems.append(
                     Problem(
                         frontend_id=str(q["questionFrontendId"]),
-                        title=q["title"],
+                        title=q["title"].strip(),
                         slug=q["titleSlug"],
                         difficulty=normalize_difficulty(q["difficulty"]),
                         ac_rate=round(float(q["acRate"] or 0.0) * 100, 2),
@@ -348,7 +348,7 @@ class LeetCodeClient:
             problems.append(
                 Problem(
                     frontend_id=str(stat["frontend_question_id"]),
-                    title=stat["question__title"],
+                    title=stat["question__title"].strip(),
                     slug=stat["question__title_slug"],
                     difficulty=normalize_difficulty(str(pair["difficulty"]["level"])),
                     ac_rate=round(100.0 * (stat.get("total_acs") or 0) / submitted, 2) if submitted else 0.0,
@@ -389,7 +389,7 @@ class LeetCodeClient:
         """Most recent accepted submissions (public profile, newest first)."""
         items = self.graphql(Q.RECENT_AC, {"u": username, "limit": limit})["recentAcSubmissionList"] or []
         return [
-            AcSubmission(id=str(s["id"]), title=s["title"], slug=s["titleSlug"], timestamp=int(s["timestamp"]))
+            AcSubmission(id=str(s["id"]), title=s["title"].strip(), slug=s["titleSlug"], timestamp=int(s["timestamp"]))
             for s in items
         ]
 
