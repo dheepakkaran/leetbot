@@ -2,7 +2,8 @@ name: sync
 
 on:
   schedule:
-    - cron: "7 */2 * * *"
+    # Hourly: GitHub drops some scheduled runs, and solved edits show up sooner.
+    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:

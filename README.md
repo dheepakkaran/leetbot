@@ -6,7 +6,7 @@ A serverless GitHub Actions bot. Every morning it picks one LeetCode problem wit
 
 ```mermaid
 flowchart LR
-    subgraph Morning["morning.yml (08:xx local)"]
+    subgraph Morning["morning.yml (from 08:00 local)"]
         A[Time gate] --> B[Sync yesterday]
         B --> C[Stats + recent ACs]
         C --> D{Official daily usable?}
@@ -19,14 +19,14 @@ flowchart LR
         I --> J[Send Telegram message]
         J --> K[Save data/messages/date.json<br/>commit message id]
     end
-    subgraph Sync["sync.yml (every 2 h)"]
+    subgraph Sync["sync.yml (hourly)"]
         S1[Pending rows in log.csv] --> S2[recentAcSubmissionList]
         S2 --> S3{slug matches and<br/>timestamp >= sent_at?}
         S3 -- yes --> S4[Mark solved in log.csv]
         S4 --> S5[Re-render from data/messages<br/>editMessageText + reaction]
         S5 --> S6[Commit + push]
     end
-    subgraph Evening["evening.yml (18:xx local)"]
+    subgraph Evening["evening.yml (18:00 local to reset)"]
         V1[Sync] --> V2{Still unsolved?}
         V2 -- yes --> V3[Send nudge]
     end
@@ -63,8 +63,8 @@ All tunables live in [`config.yaml`](config.yaml):
 | Key | Meaning |
 |---|---|
 | `owner_name`, `timezone` | Name used in greetings; local timezone for time gates and displayed times. |
-| `schedule.morning_local_hour` | Morning job sends at or after this local hour (the cron fires twice to cover DST). |
-| `schedule.evening_local_hour` | Evening nudge only runs during this local hour. |
+| `schedule.morning_local_hour` | Morning job sends at or after this local hour. The cron fires hourly from 12:17 to 16:17 UTC to cover DST and GitHub dropping scheduled runs; only the first eligible run sends. |
+| `schedule.evening_local_hour` | Evening nudge is sent once, at or after this local hour and before LeetCode's 00:00 UTC reset (three cron tries). |
 | `schedule.sync_every_hours` | Informational; the actual cadence is the cron in `sync.yml`. |
 | `languages.block_size`, `languages.cycle` | Language rotation: day *n* uses `cycle[((n-1) // block_size) % len(cycle)]`. |
 | `picker.difficulty_by_weekday` | Fallback picker's target difficulty per local weekday (Mon=0 … Sun=6). |

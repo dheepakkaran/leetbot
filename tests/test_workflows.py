@@ -8,9 +8,9 @@ import yaml
 REPO = Path(__file__).resolve().parent.parent
 WORKFLOW_DIR = REPO / ".github" / "workflows"
 WORKFLOWS = {
-    "morning": ("src.morning", ["17 12 * * *", "17 13 * * *"]),
-    "sync": ("src.sync", ["7 */2 * * *"]),
-    "evening": ("src.evening", ["3 22 * * *", "3 23 * * *"]),
+    "morning": ("src.morning", ["17 12 * * *", "17 13 * * *", "17 14 * * *", "17 15 * * *", "17 16 * * *"]),
+    "sync": ("src.sync", ["7 * * * *"]),
+    "evening": ("src.evening", ["3 22 * * *", "3 23 * * *", "33 23 * * *"]),
 }
 
 
