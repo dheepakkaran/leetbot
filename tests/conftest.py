@@ -33,3 +33,20 @@ def make_row(day: int, date: str, slug: str = "", **kw: Any) -> LogRow:
     )
     base.update(kw)
     return LogRow(**base)
+
+
+def solution_json() -> dict[str, Any]:
+    return {
+        "hint": "Think about what you've already seen.",
+        "pattern": "Hash Map",
+        "brute_force": {"idea": "Check every pair.", "time": "O(n^2)", "space": "O(1)", "code": "class Solution {};"},
+        "optimal": {
+            "idea": "Store complements.",
+            "steps": ["Walk the array", "Look up target - x"],
+            "time": "O(n)",
+            "space": "O(n)",
+            "code": "class Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) { return {}; }\n};",
+        },
+        "edge_cases": ["Duplicates", "Negative numbers"],
+        "dry_run": "nums=[2,7,11,15], target=9 -> [0,1]",
+    }
