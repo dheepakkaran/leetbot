@@ -51,7 +51,7 @@ def sample_context(repo: str, owner: str = "Dheepak") -> dict[str, Any]:
         "hint": "Start wide. Which side should move to have any chance of a bigger area?",
         "solution_url": solution_url(repo, path),
         "solution_path": path,
-        "model": "deepseek/DeepSeek-V3-0324",
+        "model": "gemini-3.8-flash",
         "message_id": None,
         "sent_at": None,
     }

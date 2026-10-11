@@ -16,7 +16,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: leetcode-bot
@@ -44,7 +43,7 @@ jobs:
 
       - name: Run src.sync
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           LEETCODE_USERNAME: ${{ vars.LEETCODE_USERNAME }}

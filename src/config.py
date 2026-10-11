@@ -53,15 +53,18 @@ class Config:
     acrate_ranges: dict[str, tuple[float, float]]
     problems_cache_days: int
     llm_endpoint: str
+    llm_api_key_env: str
     llm_models: list[str]
     llm_temperature: float
+    llm_reasoning_effort: str | None
+    llm_max_output_tokens: int
     llm_max_retries_per_model: int
     milestone_solved_every: int
     milestone_streak_days: list[int]
     reaction_on_solve: str
     telegram_bot_token: str = field(default="", repr=False)
     telegram_chat_id: str = field(default="", repr=False)
-    github_token: str = field(default="", repr=False)
+    llm_api_key: str = field(default="", repr=False)
     leetcode_username: str = ""
     github_repository: str = DEFAULT_REPOSITORY
 
@@ -126,15 +129,18 @@ def load_config(root: Path | None = None, env: dict[str, str] | None = None) -> 
         acrate_ranges={str(k): (float(v[0]), float(v[1])) for k, v in picker["acrate_ranges"].items()},
         problems_cache_days=int(picker["problems_cache_days"]),
         llm_endpoint=str(llm["endpoint"]),
+        llm_api_key_env=str(llm["api_key_env"]),
         llm_models=[str(x) for x in llm["models"]],
         llm_temperature=float(llm["temperature"]),
+        llm_reasoning_effort=str(llm["reasoning_effort"]) if llm.get("reasoning_effort") else None,
+        llm_max_output_tokens=int(llm.get("max_output_tokens", 4000)),
         llm_max_retries_per_model=int(llm["max_retries_per_model"]),
         milestone_solved_every=int(milestones["solved_every"]),
         milestone_streak_days=[int(x) for x in milestones["streak_days"]],
         reaction_on_solve=str(raw["telegram"]["reaction_on_solve"]),
         telegram_bot_token=env.get("TELEGRAM_BOT_TOKEN", "").strip(),
         telegram_chat_id=env.get("TELEGRAM_CHAT_ID", "").strip(),
-        github_token=env.get("GITHUB_TOKEN", "").strip(),
+        llm_api_key=env.get(str(llm["api_key_env"]), "").strip(),
         leetcode_username=env.get("LEETCODE_USERNAME", "").strip(),
         github_repository=env.get("GITHUB_REPOSITORY", "").strip() or DEFAULT_REPOSITORY,
     )

@@ -1,4 +1,4 @@
-"""GitHub Models chat client with a model fallback chain and JSON parsing."""
+"""OpenAI-compatible chat client (Gemini by default) with a model fallback chain and JSON parsing."""
 
 from __future__ import annotations
 
@@ -27,7 +27,6 @@ JSON_SCHEMA = """{
 REASK = "Return ONLY valid JSON."
 MAX_STATEMENT_CHARS = 12_000
 MAX_EXAMPLE_CHARS = 3_000
-MAX_OUTPUT_TOKENS = 4_000      # GitHub Models free tier caps output at 4k tokens per request
 BACKOFF_BASE_SECONDS = 2
 MAX_RETRY_AFTER_SECONDS = 30
 TIMEOUT_SECONDS = 180
@@ -183,24 +182,30 @@ def parse_solution(text: str) -> dict[str, Any]:
 
 
 class LLMClient:
-    """OpenAI-compatible chat completions client for GitHub Models."""
+    """OpenAI-compatible chat completions client (Gemini's endpoint by default)."""
 
     def __init__(
         self,
         *,
         endpoint: str,
         models: list[str],
-        token: str,
+        api_key: str,
         temperature: float,
         max_retries_per_model: int,
+        api_key_name: str = "API key",
+        reasoning_effort: str | None = None,
+        max_output_tokens: int = 4000,
         session: requests.Session | None = None,
         sleep: Callable[[float], None] = time.sleep,
         log: Callable[[str], None] = print,
     ) -> None:
         self.endpoint = endpoint
         self.models = models
-        self.token = token
+        self.api_key = api_key
+        self.api_key_name = api_key_name
         self.temperature = temperature
+        self.reasoning_effort = reasoning_effort
+        self.max_output_tokens = max_output_tokens
         self.max_retries = max_retries_per_model
         self.session = session or requests.Session()
         self.sleep = sleep
@@ -208,19 +213,22 @@ class LLMClient:
 
     def _chat_once(self, model: str, messages: list[dict[str, str]]) -> str:
         """One HTTP call. Returns the reply text or raises (Retryable)LLMError."""
+        payload: dict[str, Any] = {
+            "model": model,
+            "messages": messages,
+            "temperature": self.temperature,
+            "max_tokens": self.max_output_tokens,
+        }
+        if self.reasoning_effort:
+            payload["reasoning_effort"] = self.reasoning_effort
         resp = self.session.post(
             self.endpoint,
             headers={
-                "Authorization": f"Bearer {self.token}",
+                "Authorization": f"Bearer {self.api_key}",
                 "Content-Type": "application/json",
                 "Accept": "application/json",
             },
-            json={
-                "model": model,
-                "messages": messages,
-                "temperature": self.temperature,
-                "max_tokens": MAX_OUTPUT_TOKENS,
-            },
+            json=payload,
             timeout=TIMEOUT_SECONDS,
         )
         status = resp.status_code
@@ -259,8 +267,8 @@ class LLMClient:
 
     def generate(self, messages: list[dict[str, str]]) -> LLMResult | None:
         """Try each model in order. Returns None if every model fails."""
-        if not self.token:
-            self.log("[llm] GITHUB_TOKEN is not set; skipping solution generation")
+        if not self.api_key:
+            self.log(f"[llm] {self.api_key_name} is not set; skipping solution generation")
             return None
         for model in self.models:
             try:
