@@ -26,7 +26,7 @@ def test_workflow_structure(name: str) -> None:
     assert [s["cron"] for s in on["schedule"]] == crons
     inputs = on["workflow_dispatch"]["inputs"]
     assert inputs["dry_run"]["type"] == "boolean" and inputs["force"]["type"] == "boolean"
-    assert wf["permissions"] == {"contents": "write", "models": "read"}
+    assert wf["permissions"] == {"contents": "write"}
     assert wf["concurrency"] == {"group": "leetcode-bot", "cancel-in-progress": False}
 
     [job] = wf["jobs"].values()
@@ -41,7 +41,8 @@ def test_workflow_structure(name: str) -> None:
 
     run = next(s for s in steps if f"python -m {module}" in s.get("run", ""))
     env = run["env"]
-    assert env["GITHUB_TOKEN"] == "${{ secrets.GITHUB_TOKEN }}"
+    assert env["GEMINI_API_KEY"] == "${{ secrets.GEMINI_API_KEY }}"
+    assert "GITHUB_TOKEN" not in env  # GitHub Models is retired; git auth comes from checkout
     assert env["TELEGRAM_BOT_TOKEN"] == "${{ secrets.TELEGRAM_BOT_TOKEN }}"
     assert env["TELEGRAM_CHAT_ID"] == "${{ secrets.TELEGRAM_CHAT_ID }}"
     assert env["LEETCODE_USERNAME"] == "${{ vars.LEETCODE_USERNAME }}"

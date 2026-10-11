@@ -61,8 +61,11 @@ def build_runtime(args: argparse.Namespace, cfg: Config | None = None) -> Runtim
     llm = LLMClient(
         endpoint=cfg.llm_endpoint,
         models=cfg.llm_models,
-        token=cfg.github_token,
+        api_key=cfg.llm_api_key,
+        api_key_name=cfg.llm_api_key_env,
         temperature=cfg.llm_temperature,
+        reasoning_effort=cfg.llm_reasoning_effort,
+        max_output_tokens=cfg.llm_max_output_tokens,
         max_retries_per_model=cfg.llm_max_retries_per_model,
     )
     return Runtime(cfg=cfg, leetcode=LeetCodeClient(), telegram=telegram, llm=llm, dry_run=args.dry_run, force=args.force)

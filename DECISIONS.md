@@ -5,8 +5,10 @@ One line per judgment call, with the reason.
 ## Environment and verification
 
 - **Python 3.14 locally, 3.12 in Actions:** only 3.14 was installed here. `vermin` reports the code needs ≥ 3.9, so 3.12 is safe.
-- **GitHub Models IDs not verified live:** `gh` isn't installed and no `GITHUB_TOKEN` was available, so §0.5 couldn't run. The config keeps the spec's IDs (`deepseek/DeepSeek-V3-0324`, `openai/gpt-4.1`, `openai/gpt-4.1-mini`). A 404/unknown model falls through to the next one, and total failure sends the `no_solution` variant.
-- **No real solution sample:** acceptance item 4 is conditional on a token. The `.md` format was checked with fixture LLM output and real problem metadata in a dry run.
+- **LLM provider is Gemini, not GitHub Models:** GitHub fully retired GitHub Models (playground, catalog and inference API) on 2026-07-30 for every customer, so the spec's §10 provider no longer exists. The bot uses Google's Gemini API free tier through its OpenAI-compatible endpoint, which needed no change to the request format. The key comes from the `GEMINI_API_KEY` secret (the name is set by `llm.api_key_env`). The `models: read` permission and the `GITHUB_TOKEN` env var were removed from the workflows, since git pushes authenticate through `actions/checkout`.
+- **Gemini models:** `gemini-3.8-flash`, then `gemini-3.6-flash`, then `gemini-3.5-flash-lite`. All three are listed as stable and free of charge in Google's model and pricing docs (checked 2026-10-10). Using one provider with several models keeps setup to a single key while still having a fallback. A 404/unknown model falls through to the next one, and total failure sends the `no_solution` variant.
+- **Real solution sample:** on 2026-10-11 a live dry run with `gemini-3.8-flash` generated `easy/2778-sum-of-squares-of-special-elements.md`. It was reviewed for format and correctness (signature matches LeetCode's snippet, dry run matches example 1), then discarded.
+- **Titles are trimmed:** LeetCode returned `'Sum of Squares of Special Elements '` with a trailing space, so the client strips every title.
 - **No actionlint:** it isn't installed, and downloading binaries was out of scope. `tests/test_workflows_and_repo.py` parses each workflow and asserts crons, permissions, concurrency, inputs, env and the failure step.
 
 ## LeetCode API (verified live on 2026-10-10, see `scripts/smoke_leetcode.py`)
@@ -32,8 +34,8 @@ One line per judgment call, with the reason.
 
 - **Retries per model:** `max_retries_per_model: 2` means 1 try + 2 retries on 429/5xx/network errors (2s, 4s backoff). A `Retry-After` > 30s (e.g. a daily quota) skips to the next model immediately.
 - **Other errors:** 401/403/413 and other non-retryable errors also skip to the next model, so the run never crashes on the LLM.
-- **Output tokens:** `max_tokens: 4000`, because the GitHub Models free tier caps output at 4k tokens per request.
-- **Prompt size:** statement text is truncated to 12k chars and examples to 3k chars to stay under the free-tier 8k input-token cap.
+- **Output tokens and thinking:** Gemini 3 models always reason before answering, so `max_output_tokens: 16000` leaves room for the reasoning plus the JSON answer, and `reasoning_effort: medium` keeps the reasoning bounded. Both are configurable; `reasoning_effort` is omitted from the request when unset.
+- **Prompt size:** statement text is truncated to 12k chars and examples to 3k chars to keep each request small and fast.
 - **JSON parsing:** `json.loads(strict=False)` tolerates raw newlines inside code strings, a common model mistake. Fenced blocks and the outermost `{…}` span are tried too.
 - **Minimal valid answer:** an answer is usable only if `optimal.code` is non-empty. A `brute_force` without code is treated as null.
 - **No `response_format`:** not every model on the chain supports JSON mode, so the bot relies on the prompt plus parsing.

@@ -56,7 +56,7 @@ def test_full_morning_flow(cfg, fakes, make_runtime) -> None:
 
     [row] = read_log(cfg.log_path)
     assert (row.day, row.date, row.slug, row.source, row.language) == (1, "2026-10-12", "two-sum", "daily", "cpp")
-    assert row.model == "deepseek/DeepSeek-V3-0324"
+    assert row.model == "gemini-3.8-flash"
     assert row.solution_path == "easy/0001-two-sum.md"
     assert row.message_id == "501" and row.sent_at == "2026-10-12T12:17:00Z"
     assert row.tags == "Array; Hash Table"

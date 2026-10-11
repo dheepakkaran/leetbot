@@ -13,7 +13,7 @@ def test_required_files_exist_and_env_is_ignored() -> None:
         assert (REPO / name).is_file(), name
     assert ".env" in (REPO / ".gitignore").read_text().splitlines()
     example = (REPO / ".env.example").read_text()
-    for key in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "GITHUB_TOKEN", "LEETCODE_USERNAME"):
+    for key in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "GEMINI_API_KEY", "LEETCODE_USERNAME"):
         assert f"{key}=\n" in example  # names only, no values
     for d in ("easy", "medium", "hard"):
         assert (REPO / d / ".gitkeep").exists()

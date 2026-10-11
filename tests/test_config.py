@@ -32,13 +32,16 @@ def test_config_loads() -> None:
     assert cfg.github_repository == "dheepakkaran/leetcode-daily"
     assert cfg.reaction_on_solve == "💯"
     assert cfg.log_path == REPO / "log.csv"
+    assert cfg.llm_endpoint == "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+    assert cfg.llm_api_key_env == "GEMINI_API_KEY" and cfg.llm_models[0] == "gemini-3.8-flash"
+    assert cfg.llm_reasoning_effort == "medium" and cfg.llm_max_output_tokens == 16000
 
 
 def test_secrets_come_from_env() -> None:
     cfg = load_config(REPO, env={
-        "TELEGRAM_BOT_TOKEN": " tok ", "TELEGRAM_CHAT_ID": "42", "GITHUB_TOKEN": "gh",
+        "TELEGRAM_BOT_TOKEN": " SECRET-TG ", "TELEGRAM_CHAT_ID": "42", "GEMINI_API_KEY": "SECRET-GEM",
         "LEETCODE_USERNAME": "someone", "GITHUB_REPOSITORY": "me/fork",
     })
-    assert (cfg.telegram_bot_token, cfg.telegram_chat_id, cfg.github_token) == ("tok", "42", "gh")
+    assert (cfg.telegram_bot_token, cfg.telegram_chat_id, cfg.llm_api_key) == ("SECRET-TG", "42", "SECRET-GEM")
     assert cfg.leetcode_username == "someone" and cfg.github_repository == "me/fork"
-    assert "tok" not in repr(cfg)  # secrets hidden from repr
+    assert "SECRET" not in repr(cfg)  # secrets hidden from repr

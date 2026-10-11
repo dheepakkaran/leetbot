@@ -55,25 +55,26 @@ class Session:
         self.calls: list[dict[str, Any]] = []
 
     def post(self, url: str, headers: dict[str, str], json: dict[str, Any], timeout: int) -> Resp:
-        self.calls.append({"model": json["model"], "messages": json["messages"], "auth": headers["Authorization"]})
+        self.calls.append({"model": json["model"], "messages": json["messages"], "auth": headers["Authorization"], "payload": json})
         item = self.script.pop(0)
         if isinstance(item, Exception):
             raise item
         return item
 
 
-def client(script: list[Any], models=("m1", "m2", "m3"), token: str = "tok") -> tuple[LLMClient, Session]:
+def client(script: list[Any], models=("m1", "m2", "m3"), api_key: str = "tok", **kw: Any) -> tuple[LLMClient, Session]:
     session = Session(script)
     return (
         LLMClient(
             endpoint="https://models.github.ai/inference/chat/completions",
             models=list(models),
-            token=token,
+            api_key=api_key,
             temperature=0.2,
             max_retries_per_model=2,
             session=session,
             sleep=lambda s: None,
             log=lambda m: None,
+            **kw,
         ),
         session,
     )
@@ -124,10 +125,26 @@ def test_none_after_all_models_fail() -> None:
     assert llm.generate([{"role": "user", "content": "x"}]) is None
 
 
-def test_no_token_returns_none_without_calls() -> None:
-    llm, session = client([], token="")
+def test_no_key_returns_none_without_calls() -> None:
+    logs: list[str] = []
+    llm, session = client([], api_key="", api_key_name="GEMINI_API_KEY")
+    llm.log = logs.append
     assert llm.generate([{"role": "user", "content": "x"}]) is None
-    assert session.calls == []
+    assert session.calls == [] and "GEMINI_API_KEY is not set" in logs[0]
+
+
+def test_payload_includes_reasoning_effort_and_max_tokens() -> None:
+    llm, session = client([chat(GOOD)], reasoning_effort="medium", max_output_tokens=16000)
+    llm.generate([{"role": "user", "content": "x"}])
+    payload = session.calls[0]["payload"]
+    assert payload["reasoning_effort"] == "medium" and payload["max_tokens"] == 16000
+    assert payload["temperature"] == 0.2
+
+
+def test_reasoning_effort_omitted_when_unset() -> None:
+    llm, session = client([chat(GOOD)])
+    llm.generate([{"role": "user", "content": "x"}])
+    assert "reasoning_effort" not in session.calls[0]["payload"]
 
 
 def test_prompt_contents() -> None:

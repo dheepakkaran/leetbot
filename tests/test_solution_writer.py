@@ -7,7 +7,7 @@ from tests.conftest import solution_json
 def render(data):
     return render_solution(
         frontend_id="1", title="Two Sum", slug="two-sum", difficulty="Easy", tags=["Array", "Hash Table"],
-        language=LANGUAGES["cpp"], day=3, date="2026-10-12", model="openai/gpt-4.1", solution=normalize_solution(data),
+        language=LANGUAGES["cpp"], day=3, date="2026-10-12", model="gemini-3.8-flash", solution=normalize_solution(data),
     )
 
 
@@ -23,7 +23,7 @@ def test_template() -> None:
         "# 1. Two Sum\n\n"
         "**Difficulty:** Easy · **Topics:** Array, Hash Table · **Language:** C++ · **Day:** 3 · **Date:** 2026-10-12\n\n"
         "🔗 [Open on LeetCode](https://leetcode.com/problems/two-sum/)\n\n"
-        "> AI-generated with `openai/gpt-4.1`. Unverified. Check before trusting.\n\n"
+        "> AI-generated with `gemini-3.8-flash`. Unverified. Check before trusting.\n\n"
         "## Hint\nThink about what you've already seen.\n\n"
         "## Brute force\nCheck every pair.\n\n**Time:** O(n^2) · **Space:** O(1)\n\n```cpp\nclass Solution {};\n```\n\n"
         "## Optimal: Hash Map\nStore complements.\n\n1. Walk the array\n2. Look up target - x\n\n"

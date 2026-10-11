@@ -49,7 +49,7 @@ def cfg(root: Path) -> Config:
             "LEETCODE_USERNAME": "someone",
             "TELEGRAM_BOT_TOKEN": "x",
             "TELEGRAM_CHAT_ID": "1",
-            "GITHUB_TOKEN": "t",
+            "GEMINI_API_KEY": "k",
             "GITHUB_REPOSITORY": "owner/repo",
         },
     )
@@ -66,7 +66,7 @@ def make_row(day: int, date: str, slug: str = "", **kw: Any) -> LogRow:
         tags="Array",
         source="daily",
         language="cpp",
-        model="openai/gpt-4.1",
+        model="gemini-3.8-flash",
         solution_path=f"easy/{100 + day:04d}-problem-{day}.md",
         sent_at=f"{date}T12:20:00Z",
         message_id=str(1000 + day),
@@ -154,7 +154,7 @@ class FakeLeetCode:
 
 
 class FakeLLM:
-    def __init__(self, result: dict[str, Any] | None = None, model: str = "deepseek/DeepSeek-V3-0324") -> None:
+    def __init__(self, result: dict[str, Any] | None = None, model: str = "gemini-3.8-flash") -> None:
         self.result = result
         self.model = model
         self.prompts: list[list[dict[str, str]]] = []

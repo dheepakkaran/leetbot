@@ -42,13 +42,16 @@ picker:
   problems_cache_days: 7
 
 llm:
-  provider: github_models
-  endpoint: https://models.github.ai/inference/chat/completions
-  models:                      # tried in order; verify IDs (see §0.5)
-    - deepseek/DeepSeek-V3-0324
-    - openai/gpt-4.1
-    - openai/gpt-4.1-mini
+  provider: gemini             # Google AI Studio free tier (GitHub Models was retired on 2026-07-30)
+  endpoint: https://generativelanguage.googleapis.com/v1beta/openai/chat/completions
+  api_key_env: GEMINI_API_KEY  # env var / Actions secret that holds the API key
+  models:                      # tried in order with the same key
+    - gemini-3.8-flash
+    - gemini-3.6-flash
+    - gemini-3.5-flash-lite
   temperature: 0.2
+  reasoning_effort: medium     # Gemini 3 always thinks; this sets how much (minimal/low/medium/high)
+  max_output_tokens: 16000     # room for the thinking plus the JSON answer
   max_retries_per_model: 2
 
 milestones:

@@ -13,7 +13,7 @@ flowchart LR
         D -- yes --> F[Question detail]
         D -- "premium / logged / solved" --> E[Picker: weekday difficulty,<br/>least-covered pattern]
         E --> F
-        F --> G[GitHub Models LLM<br/>with model fallback]
+        F --> G[Gemini API LLM<br/>with model fallback]
         G --> H[Write easy/medium/hard/*.md<br/>append log.csv]
         H --> I[Commit + push]
         I --> J[Send Telegram message]
@@ -44,16 +44,17 @@ flowchart LR
    1. Message [@BotFather](https://t.me/BotFather), send `/newbot`, and copy the token.
    2. Open your new bot and send it `/start`.
    3. Visit `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `message.chat.id`.
-2. **GitHub repo → Settings → Secrets and variables → Actions:**
-   - Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
+2. **Gemini:** sign in at [aistudio.google.com/apikey](https://aistudio.google.com/apikey) and create a free API key (no credit card needed).
+3. **GitHub repo → Settings → Secrets and variables → Actions:**
+   - Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GEMINI_API_KEY`.
    - Variables: `LEETCODE_USERNAME` = `___ka__ran___`.
-3. **GitHub repo → Settings → Actions → General:** set Workflow permissions to "Read and write".
-4. **Locally:** run `python -m src.preview` with the env vars set, and check every variant on your phone.
-5. **Actions tab:** run `morning` manually with `force=true` once. Confirm the commit, the Telegram message, and the solution link.
-6. **Solve the problem on LeetCode,** then run `sync` manually. Confirm the message edits to "Solved".
-7. **Done.** From here it runs daily on its own. If GitHub ever emails that scheduled workflows were disabled for inactivity, re-enable them in the Actions tab.
+4. **GitHub repo → Settings → Actions → General:** set Workflow permissions to "Read and write".
+5. **Locally:** run `python -m src.preview` with the env vars set, and check every variant on your phone.
+6. **Actions tab:** run `morning` manually with `force=true` once. Confirm the commit, the Telegram message, and the solution link.
+7. **Solve the problem on LeetCode,** then run `sync` manually. Confirm the message edits to "Solved".
+8. **Done.** From here it runs daily on its own. If GitHub ever emails that scheduled workflows were disabled for inactivity, re-enable them in the Actions tab.
 
-The LLM uses [GitHub Models](https://github.com/marketplace/models) through the workflow's built-in `GITHUB_TOKEN` (`permissions: models: read`), so no extra API key is needed.
+Solutions are written by Google's Gemini API on its free tier, called through Gemini's OpenAI-compatible endpoint. The bot makes one request a day, far below the free limits. (The original design used GitHub Models, which GitHub shut down on July 30, 2026.)
 
 ## Configuration
 
@@ -70,12 +71,14 @@ All tunables live in [`config.yaml`](config.yaml):
 | `picker.core_patterns` | Topic tag slugs; the picker targets the one with the fewest log rows. |
 | `picker.acrate_ranges` | Preferred acceptance-rate range per difficulty (relaxed if nothing fits). |
 | `picker.problems_cache_days` | Max age of `data/problems.json` before it's refreshed. |
-| `llm.endpoint`, `llm.models` | GitHub Models endpoint and model IDs, tried in order. |
+| `llm.endpoint`, `llm.models` | OpenAI-compatible chat endpoint (Gemini by default) and model IDs, tried in order. |
+| `llm.api_key_env` | Name of the env var / Actions secret holding the API key (`GEMINI_API_KEY`). |
 | `llm.temperature`, `llm.max_retries_per_model` | Sampling temperature; retries on 429/5xx per model. |
+| `llm.reasoning_effort`, `llm.max_output_tokens` | How much Gemini thinks before answering, and the output budget for thinking plus answer. |
 | `milestones.solved_every`, `milestones.streak_days` | When to add a 🎉 line (every N solved, or these streak lengths). |
 | `telegram.reaction_on_solve` | Reaction added to the morning message when solved (must be an allowed Telegram reaction). |
 
-Secrets and runtime values come from the environment only: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GITHUB_TOKEN`, `LEETCODE_USERNAME`, `GITHUB_REPOSITORY`. Locally, copy `.env.example` to `.env`.
+Secrets and runtime values come from the environment only: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GEMINI_API_KEY`, `LEETCODE_USERNAME`, `GITHUB_REPOSITORY`. Locally, copy `.env.example` to `.env`.
 
 ## Manual runs and preview
 
