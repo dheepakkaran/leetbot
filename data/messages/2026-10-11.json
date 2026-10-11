@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "date": "2026-10-11",
+  "day": 1,
+  "greeting": "Good morning, Dheepak",
+  "problem": {
+    "frontend_id": "2778",
+    "title": "Sum of Squares of Special Elements",
+    "slug": "sum-of-squares-of-special-elements",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Enumeration"
+    ],
+    "url": "https://leetcode.com/problems/sum-of-squares-of-special-elements/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 1,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2266342,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": null,
+  "milestones": [],
+  "sunday": false,
+  "missed": false,
+  "recap": null,
+  "variant": "normal",
+  "hint": "Check which 1-based indices divide the total length of the array evenly.",
+  "solution_url": "https://github.com/dheepakkaran/leetcode-daily/blob/main/easy/2778-sum-of-squares-of-special-elements.md",
+  "solution_path": "easy/2778-sum-of-squares-of-special-elements.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 4,
+  "sent_at": "2026-10-11T01:20:48Z"
+}
