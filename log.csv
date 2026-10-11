@@ -1,1 +1,2 @@
 day,date,frontend_id,title,slug,difficulty,tags,source,language,model,solution_path,sent_at,message_id,solved,solved_at,late,submission_id,nudge_sent
+1,2026-10-11,2778,Sum of Squares of Special Elements,sum-of-squares-of-special-elements,Easy,Array; Enumeration,daily,cpp,gemini-3.8-flash,easy/2778-sum-of-squares-of-special-elements.md,,,false,,false,,false

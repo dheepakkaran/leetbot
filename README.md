@@ -134,6 +134,13 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-_No problems issued yet. The first one arrives with the next morning run._
+- **Bot days:** 1
+- **Solved:** 0/1 (0%)
+- **By difficulty:** Easy 0/1 · Medium 0/0 · Hard 0/0
+- **Current LeetCode streak:** 0 days
+
+| Day | Date | Problem | Difficulty | Language | Status |
+|---:|---|---|---|---|---|
+| 1 | 2026-10-11 | [#2778 Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements/) · [solution](easy/2778-sum-of-squares-of-special-elements.md) | Easy | C++ | ⏳ Pending |
 
 <!-- PROGRESS:END -->
