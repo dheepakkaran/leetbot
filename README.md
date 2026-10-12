@@ -134,13 +134,14 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 1
-- **Solved:** 0/1 (0%)
-- **By difficulty:** Easy 0/1 · Medium 0/0 · Hard 0/0
+- **Bot days:** 2
+- **Solved:** 0/2 (0%)
+- **By difficulty:** Easy 0/1 · Medium 0/0 · Hard 0/1
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 1 | 2026-10-11 | [#2778 Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements/) · [solution](easy/2778-sum-of-squares-of-special-elements.md) | Easy | C++ | ⏳ Pending |
+| 2 | 2026-10-12 | [#2897 Apply Operations on Array to Maximize Sum of Squares](https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/) · [solution](hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md) | Hard | C++ | ⏳ Pending |
+| 1 | 2026-10-11 | [#2778 Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements/) · [solution](easy/2778-sum-of-squares-of-special-elements.md) | Easy | C++ | ❌ Missed |
 
 <!-- PROGRESS:END -->
