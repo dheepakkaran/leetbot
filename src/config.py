@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_REPOSITORY = "dheepakkaran/leetcode-daily"
+DEFAULT_REPOSITORY = "dheepakkaran/leetbot"
 
 
 def load_dotenv(path: Path) -> None:

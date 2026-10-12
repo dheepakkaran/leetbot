@@ -18,7 +18,7 @@ from src.messages import (
 from src.preview import sample_context, variants
 
 TZ = ZoneInfo("America/New_York")
-REPO = "dheepakkaran/leetcode-daily"
+REPO = "dheepakkaran/leetbot"
 
 
 def ctx(**kw):

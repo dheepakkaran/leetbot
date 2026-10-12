@@ -1,4 +1,6 @@
-# LeetCode Daily Bot
+# LeetBot 🤖
+
+**Your daily LeetCode coach on Telegram.**
 
 A serverless GitHub Actions bot. Every morning it picks one LeetCode problem with no repeats, commits an AI-generated solution, and sends Dheepak a Telegram message with the problem, LeetCode stats and a hint. During the day it watches the public LeetCode profile and edits that message to "Solved" once an accepted submission shows up. In the evening it sends a nudge if the problem is still open.
 
@@ -49,12 +51,30 @@ flowchart LR
    - Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `GEMINI_API_KEY`.
    - Variables: `LEETCODE_USERNAME` = `___ka__ran___`.
 4. **GitHub repo → Settings → Actions → General:** set Workflow permissions to "Read and write".
-5. **Locally:** run `python -m src.preview` with the env vars set, and check every variant on your phone.
-6. **Actions tab:** run `morning` manually with `force=true` once. Confirm the commit, the Telegram message, and the solution link.
-7. **Solve the problem on LeetCode,** then run `sync` manually. Confirm the message edits to "Solved".
-8. **Done.** From here it runs daily on its own. If GitHub ever emails that scheduled workflows were disabled for inactivity, re-enable them in the Actions tab.
+5. **Reliable timers (recommended):** GitHub's own scheduler can start runs hours late or skip them, so an outside timer presses "Run workflow" at exact times. See [Reliable timing](#reliable-timing).
+6. **Locally:** run `python -m src.preview` with the env vars set, and check every variant on your phone.
+7. **Actions tab:** run `morning` manually with `force=true` once. Confirm the commit, the Telegram message, and the solution link.
+8. **Solve the problem on LeetCode,** then run `sync` manually. Confirm the message edits to "Solved".
+9. **Done.** From here it runs daily on its own. If GitHub ever emails that scheduled workflows were disabled for inactivity, re-enable them in the Actions tab.
 
 Solutions are written by Google's Gemini API on its free tier, called through Gemini's OpenAI-compatible endpoint. The bot makes one request a day, far below the free limits. (The original design used GitHub Models, which GitHub shut down on July 30, 2026.)
+
+## Reliable timing
+
+GitHub's scheduled workflows are best effort: on this repo's first day they started up to 5 hours late or not at all. The workflows keep their `schedule:` crons as a backup, but the real trigger is [cron-job.org](https://cron-job.org) (free), calling GitHub's `workflow_dispatch` API, which starts a run within seconds.
+
+1. Create a fine-grained token at [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new): only this repository, **Actions: Read and write**. Renew it before it expires.
+2. On cron-job.org, create three jobs with time zone `America/New_York`:
+
+| Job | URL | Schedule |
+|---|---|---|
+| morning | `https://api.github.com/repos/dheepakkaran/leetbot/actions/workflows/morning.yml/dispatches` | daily 08:07 |
+| evening | `https://api.github.com/repos/dheepakkaran/leetbot/actions/workflows/evening.yml/dispatches` | daily 18:03 |
+| sync | `https://api.github.com/repos/dheepakkaran/leetbot/actions/workflows/sync.yml/dispatches` | hourly at :07 |
+
+3. Each job: method `POST`, body `{"ref":"main"}`, and headers `Accept: application/vnd.github+json`, `Authorization: Bearer <token>`, `X-GitHub-Api-Version: 2022-11-28`, `Content-Type: application/json`. A test run returns **204** on success. Only test-run `sync`; `morning` would issue a problem for real.
+
+The time gates make duplicate triggers harmless: only the first eligible run sends, and nothing is sent after LeetCode's 00:00 UTC reset.
 
 ## Configuration
 
