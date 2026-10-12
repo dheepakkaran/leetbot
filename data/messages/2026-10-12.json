@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "date": "2026-10-12",
+  "day": 2,
+  "greeting": "Rise and grind, Dheepak",
+  "problem": {
+    "frontend_id": "2897",
+    "title": "Apply Operations on Array to Maximize Sum of Squares",
+    "slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+    "difficulty": "Hard",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Greedy",
+      "Bit Manipulation"
+    ],
+    "url": "https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 2,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2267604,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "2778",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": true,
+  "missed": true,
+  "recap": {
+    "solved": 0,
+    "easy": 0,
+    "medium": 0,
+    "hard": 0,
+    "total": 67,
+    "total_delta": 0,
+    "rank_delta": 1262,
+    "fastest": null
+  },
+  "variant": "sunday",
+  "hint": "Think about how the operation affects the total count of set bits at each bit position across the array.",
+  "solution_url": "https://github.com/dheepakkaran/leetcode-daily/blob/main/hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md",
+  "solution_path": "hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 13,
+  "sent_at": "2026-10-12T01:46:58Z"
+}
