@@ -42,10 +42,17 @@ DRY_RUN_DIR = ".dry-run"
 
 
 def morning_gate(now: datetime, tz: Any, morning_hour: int, rows: list[LogRow]) -> tuple[bool, str]:
-    """Send only at/after `morning_hour` local and only if today's UTC date has no row."""
+    """Send only at/after `morning_hour` local, while the local and UTC dates still
+    agree, and only if today's UTC date has no row.
+
+    The date check stops a night-time run (after LeetCode's 00:00 UTC reset,
+    8 PM EDT / 7 PM EST) from issuing the next day's problem early.
+    """
     local = now.astimezone(tz)
     if local.hour < morning_hour:
         return False, f"too early: {local:%H:%M} local < {morning_hour:02d}:00"
+    if local.date() != now.date():
+        return False, f"LeetCode's day already rolled over ({local:%H:%M} local); tomorrow's problem waits for the morning"
     if latest_row_for_date(rows, now.date().isoformat()) is not None:
         return False, f"already issued for {now.date().isoformat()}"
     return True, "ok"

@@ -47,6 +47,9 @@ def test_gate_reasons() -> None:
     assert "already sent" in evening_gate(late, TZ, 18, [make_row(1, day, nudge_sent=True)])[1]
     after_reset = datetime(2026, 7, 16, 0, 30, tzinfo=timezone.utc)  # 20:30 EDT, new LeetCode day
     assert not evening_gate(after_reset, TZ, 18, [make_row(1, day)])[0]
+    # Even if tomorrow's problem was already issued tonight, don't nudge about it yet.
+    ok, why = evening_gate(after_reset, TZ, 18, [make_row(1, day), make_row(2, "2026-07-16")])
+    assert not ok and "rolled over" in why
 
 
 def test_run_evening_sends_nudge_once(cfg, fakes, make_runtime) -> None:
