@@ -22,6 +22,8 @@ def evening_gate(now: datetime, tz: Any, evening_hour: int, rows: list[LogRow]) 
     local = now.astimezone(tz)
     if local.hour < evening_hour:
         return False, f"too early: {local:%H:%M} local < {evening_hour:02d}:00"
+    if local.date() != now.date():
+        return False, f"LeetCode's day already rolled over ({local:%H:%M} local)"
     row = latest_row_for_date(rows, now.date().isoformat())
     if row is None:
         return False, f"no row for {now.date().isoformat()}"

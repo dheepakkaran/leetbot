@@ -40,6 +40,15 @@ def test_dropped_scheduled_runs_are_retried(day: str) -> None:
     assert runs_that_send(times[2:]) == [0]
 
 
+@pytest.mark.parametrize("now", [
+    datetime(2026, 10, 12, 1, 46, tzinfo=timezone.utc),   # Sun 21:46 EDT, already Mon in UTC
+    datetime(2026, 1, 13, 0, 30, tzinfo=timezone.utc),    # Mon 19:30 EST, already Tue in UTC
+])
+def test_night_run_does_not_issue_tomorrows_problem(now: datetime) -> None:
+    ok, why = morning_gate(now, TZ, 8, [])
+    assert not ok and "rolled over" in why
+
+
 def test_est_early_cron_is_too_early() -> None:
     ok, why = morning_gate(datetime(2026, 1, 15, 12, 17, tzinfo=timezone.utc), TZ, 8, [])
     assert not ok and "too early" in why
