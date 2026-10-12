@@ -29,7 +29,7 @@ def test_config_loads() -> None:
     assert cfg.owner_name == "Dheepak" and cfg.timezone.key == "America/New_York"
     assert cfg.difficulty_by_weekday[5] == "Hard" and cfg.acrate_ranges["Medium"] == (35.0, 75.0)
     assert cfg.language_cycle == ["cpp", "python", "java", "java", "python", "cpp"]
-    assert cfg.github_repository == "dheepakkaran/leetcode-daily"
+    assert cfg.github_repository == "dheepakkaran/leetbot"
     assert cfg.reaction_on_solve == "💯"
     assert cfg.log_path == REPO / "log.csv"
     assert cfg.llm_endpoint == "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
