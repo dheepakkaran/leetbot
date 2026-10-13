@@ -1,4 +1,4 @@
 day,date,frontend_id,title,slug,difficulty,tags,source,language,model,solution_path,sent_at,message_id,solved,solved_at,late,submission_id,nudge_sent
 1,2026-10-11,2778,Sum of Squares of Special Elements,sum-of-squares-of-special-elements,Easy,Array; Enumeration,daily,cpp,gemini-3.8-flash,easy/2778-sum-of-squares-of-special-elements.md,2026-10-11T01:20:48Z,4,false,,false,,false
 2,2026-10-12,2897,Apply Operations on Array to Maximize Sum of Squares,apply-operations-on-array-to-maximize-sum-of-squares,Hard,Array; Hash Table; Greedy; Bit Manipulation,daily,cpp,gemini-3.8-flash,hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md,2026-10-12T01:46:58Z,13,false,,false,,true
-3,2026-10-13,3727,Maximum Alternating Sum of Squares,maximum-alternating-sum-of-squares,Medium,Array; Greedy; Sorting,daily,cpp,gemini-3.8-flash,medium/3727-maximum-alternating-sum-of-squares.md,,,false,,false,,false
+3,2026-10-13,3727,Maximum Alternating Sum of Squares,maximum-alternating-sum-of-squares,Medium,Array; Greedy; Sorting,daily,cpp,gemini-3.8-flash,medium/3727-maximum-alternating-sum-of-squares.md,2026-10-13T12:09:51Z,15,false,,false,,false

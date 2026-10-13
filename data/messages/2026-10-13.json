@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "date": "2026-10-13",
+  "day": 3,
+  "greeting": "Morning, Dheepak. One problem, that's it.",
+  "problem": {
+    "frontend_id": "3727",
+    "title": "Maximum Alternating Sum of Squares",
+    "slug": "maximum-alternating-sum-of-squares",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Greedy",
+      "Sorting"
+    ],
+    "url": "https://leetcode.com/problems/maximum-alternating-sum-of-squares/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 3,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2270387,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "2897",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Count how many positive and negative terms appear in the alternating sum, then assign the largest squares accordingly.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3727-maximum-alternating-sum-of-squares.md",
+  "solution_path": "medium/3727-maximum-alternating-sum-of-squares.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 15,
+  "sent_at": "2026-10-13T12:09:51Z"
+}
