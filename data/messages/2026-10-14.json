@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "date": "2026-10-14",
+  "day": 4,
+  "greeting": "Hey Dheepak, coffee first, then code",
+  "problem": {
+    "frontend_id": "3723",
+    "title": "Maximize Sum of Squares of Digits",
+    "slug": "maximize-sum-of-squares-of-digits",
+    "difficulty": "Medium",
+    "tags": [
+      "Math",
+      "Greedy"
+    ],
+    "url": "https://leetcode.com/problems/maximize-sum-of-squares-of-digits/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 4,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2271640,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3727",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Convexity of $f(x) = x^2$ means making digits as extreme as possible (as many 9s as possible).",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3723-maximize-sum-of-squares-of-digits.md",
+  "solution_path": "medium/3723-maximize-sum-of-squares-of-digits.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 17,
+  "sent_at": "2026-10-14T12:09:36Z"
+}
