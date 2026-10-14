@@ -154,14 +154,15 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 3
-- **Solved:** 0/3 (0%)
-- **By difficulty:** Easy 0/1 · Medium 0/1 · Hard 0/1
+- **Bot days:** 4
+- **Solved:** 0/4 (0%)
+- **By difficulty:** Easy 0/1 · Medium 0/2 · Hard 0/1
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 3 | 2026-10-13 | [#3727 Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) · [solution](medium/3727-maximum-alternating-sum-of-squares.md) | Medium | C++ | ⏳ Pending |
+| 4 | 2026-10-14 | [#3723 Maximize Sum of Squares of Digits](https://leetcode.com/problems/maximize-sum-of-squares-of-digits/) · [solution](medium/3723-maximize-sum-of-squares-of-digits.md) | Medium | C++ | ⏳ Pending |
+| 3 | 2026-10-13 | [#3727 Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) · [solution](medium/3727-maximum-alternating-sum-of-squares.md) | Medium | C++ | ❌ Missed |
 | 2 | 2026-10-12 | [#2897 Apply Operations on Array to Maximize Sum of Squares](https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/) · [solution](hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md) | Hard | C++ | ❌ Missed |
 | 1 | 2026-10-11 | [#2778 Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements/) · [solution](easy/2778-sum-of-squares-of-special-elements.md) | Easy | C++ | ❌ Missed |
 
