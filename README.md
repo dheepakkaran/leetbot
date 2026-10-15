@@ -2,6 +2,8 @@
 
 **Your daily LeetCode coach on Telegram.**
 
+![LeetBot demo: a morning LeetCode problem arrives on Telegram, a hint is revealed, the AI solution opens, an evening reminder arrives, and the message updates itself to Solved with your stats](docs/leetbot-demo.webp)
+
 A serverless GitHub Actions bot. Every morning it picks one LeetCode problem with no repeats, commits an AI-generated solution, and sends Dheepak a Telegram message with the problem, LeetCode stats and a hint. During the day it watches the public LeetCode profile and edits that message to "Solved" once an accepted submission shows up. In the evening it sends a nudge if the problem is still open.
 
 ## How it works
