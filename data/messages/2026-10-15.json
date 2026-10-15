@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "date": "2026-10-15",
+  "day": 5,
+  "greeting": "New day, new problem, Dheepak",
+  "problem": {
+    "frontend_id": "2913",
+    "title": "Subarrays Distinct Element Sum of Squares I",
+    "slug": "subarrays-distinct-element-sum-of-squares-i",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Indexed Tree",
+      "Segment Tree"
+    ],
+    "url": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 5,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2272878,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3723",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Iterate through each possible subarray start and expand it to update the distinct count incrementally.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/easy/2913-subarrays-distinct-element-sum-of-squares-i.md",
+  "solution_path": "easy/2913-subarrays-distinct-element-sum-of-squares-i.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 19,
+  "sent_at": "2026-10-15T12:13:01Z"
+}
