@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "date": "2026-10-16",
+  "day": 6,
+  "greeting": "Morning, Dheepak. Let's keep the chain going.",
+  "problem": {
+    "frontend_id": "2916",
+    "title": "Subarrays Distinct Element Sum of Squares II",
+    "slug": "subarrays-distinct-element-sum-of-squares-ii",
+    "difficulty": "Hard",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Binary Indexed Tree",
+      "Segment Tree"
+    ],
+    "url": "https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 6,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2274151,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "2913",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Consider how the distinct count of subarrays ending at index j changes from j - 1 when appending nums[j].",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/hard/2916-subarrays-distinct-element-sum-of-squares-ii.md",
+  "solution_path": "hard/2916-subarrays-distinct-element-sum-of-squares-ii.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 21,
+  "sent_at": "2026-10-16T12:08:20Z"
+}
