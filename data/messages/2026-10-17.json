@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "date": "2026-10-17",
+  "day": 7,
+  "greeting": "Up and at it, Dheepak",
+  "problem": {
+    "frontend_id": "3551",
+    "title": "Minimum Swaps to Sort by Digit Sum",
+    "slug": "minimum-swaps-to-sort-by-digit-sum",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Hash Table",
+      "Sorting"
+    ],
+    "url": "https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 7,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2275198,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "2916",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Determine the target sorted order, then find the number of disjoint cycles in the permutation mapping.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3551-minimum-swaps-to-sort-by-digit-sum.md",
+  "solution_path": "medium/3551-minimum-swaps-to-sort-by-digit-sum.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 23,
+  "sent_at": "2026-10-17T12:07:51Z"
+}
