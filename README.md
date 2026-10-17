@@ -156,14 +156,15 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 6
-- **Solved:** 0/6 (0%)
-- **By difficulty:** Easy 0/2 · Medium 0/2 · Hard 0/2
+- **Bot days:** 7
+- **Solved:** 0/7 (0%)
+- **By difficulty:** Easy 0/2 · Medium 0/3 · Hard 0/2
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 6 | 2026-10-16 | [#2916 Subarrays Distinct Element Sum of Squares II](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) · [solution](hard/2916-subarrays-distinct-element-sum-of-squares-ii.md) | Hard | C++ | ⏳ Pending |
+| 7 | 2026-10-17 | [#3551 Minimum Swaps to Sort by Digit Sum](https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/) · [solution](medium/3551-minimum-swaps-to-sort-by-digit-sum.md) | Medium | C++ | ⏳ Pending |
+| 6 | 2026-10-16 | [#2916 Subarrays Distinct Element Sum of Squares II](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) · [solution](hard/2916-subarrays-distinct-element-sum-of-squares-ii.md) | Hard | C++ | ❌ Missed |
 | 5 | 2026-10-15 | [#2913 Subarrays Distinct Element Sum of Squares I](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) · [solution](easy/2913-subarrays-distinct-element-sum-of-squares-i.md) | Easy | C++ | ❌ Missed |
 | 4 | 2026-10-14 | [#3723 Maximize Sum of Squares of Digits](https://leetcode.com/problems/maximize-sum-of-squares-of-digits/) · [solution](medium/3723-maximize-sum-of-squares-of-digits.md) | Medium | C++ | ❌ Missed |
 | 3 | 2026-10-13 | [#3727 Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) · [solution](medium/3727-maximum-alternating-sum-of-squares.md) | Medium | C++ | ❌ Missed |
