@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "date": "2026-10-19",
+  "day": 9,
+  "greeting": "Hello Dheepak, today's puzzle is ready",
+  "problem": {
+    "frontend_id": "2089",
+    "title": "Find Target Indices After Sorting Array",
+    "slug": "find-target-indices-after-sorting-array",
+    "difficulty": "Easy",
+    "tags": [
+      "Array",
+      "Binary Search",
+      "Sorting"
+    ],
+    "url": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 9,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2277459,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "1569",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Consider how the counts of elements strictly less than and equal to the target determine its final positions without full sorting.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/easy/2089-find-target-indices-after-sorting-array.md",
+  "solution_path": "easy/2089-find-target-indices-after-sorting-array.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 27,
+  "sent_at": "2026-10-19T12:07:28Z"
+}
