@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 8
-- **Solved:** 0/8 (0%)
-- **By difficulty:** Easy 0/2 · Medium 0/3 · Hard 0/3
+- **Bot days:** 9
+- **Solved:** 0/9 (0%)
+- **By difficulty:** Easy 0/3 · Medium 0/3 · Hard 0/3
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 8 | 2026-10-18 | [#1569 Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/) · [solution](hard/1569-number-of-ways-to-reorder-array-to-get-same-bst.md) | Hard | C++ | ⏳ Pending |
+| 9 | 2026-10-19 | [#2089 Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) · [solution](easy/2089-find-target-indices-after-sorting-array.md) | Easy | C++ | ⏳ Pending |
+| 8 | 2026-10-18 | [#1569 Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/) · [solution](hard/1569-number-of-ways-to-reorder-array-to-get-same-bst.md) | Hard | C++ | ❌ Missed |
 | 7 | 2026-10-17 | [#3551 Minimum Swaps to Sort by Digit Sum](https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/) · [solution](medium/3551-minimum-swaps-to-sort-by-digit-sum.md) | Medium | C++ | ❌ Missed |
 | 6 | 2026-10-16 | [#2916 Subarrays Distinct Element Sum of Squares II](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) · [solution](hard/2916-subarrays-distinct-element-sum-of-squares-ii.md) | Hard | C++ | ❌ Missed |
 | 5 | 2026-10-15 | [#2913 Subarrays Distinct Element Sum of Squares I](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/) · [solution](easy/2913-subarrays-distinct-element-sum-of-squares-i.md) | Easy | C++ | ❌ Missed |
 | 4 | 2026-10-14 | [#3723 Maximize Sum of Squares of Digits](https://leetcode.com/problems/maximize-sum-of-squares-of-digits/) · [solution](medium/3723-maximize-sum-of-squares-of-digits.md) | Medium | C++ | ❌ Missed |
 | 3 | 2026-10-13 | [#3727 Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) · [solution](medium/3727-maximum-alternating-sum-of-squares.md) | Medium | C++ | ❌ Missed |
-| 2 | 2026-10-12 | [#2897 Apply Operations on Array to Maximize Sum of Squares](https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/) · [solution](hard/2897-apply-operations-on-array-to-maximize-sum-of-squares.md) | Hard | C++ | ❌ Missed |
 
 <!-- PROGRESS:END -->
