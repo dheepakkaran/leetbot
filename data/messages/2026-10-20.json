@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "date": "2026-10-20",
+  "day": 10,
+  "greeting": "Good morning, Dheepak. Ten minutes of focus.",
+  "problem": {
+    "frontend_id": "3886",
+    "title": "Sum of Sortable Integers",
+    "slug": "sum-of-sortable-integers",
+    "difficulty": "Hard",
+    "tags": [
+      "Array",
+      "Math",
+      "Sorting",
+      "Enumeration"
+    ],
+    "url": "https://leetcode.com/problems/sum-of-sortable-integers/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "cpp",
+    "display": "C++",
+    "k": 10,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2278651,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "2089",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Each subarray can be sorted if and only if it has at most one cyclic descent, which uniquely determines its sorted form.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/hard/3886-sum-of-sortable-integers.md",
+  "solution_path": "hard/3886-sum-of-sortable-integers.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 29,
+  "sent_at": "2026-10-20T12:13:16Z"
+}
