@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "date": "2026-10-21",
+  "day": 11,
+  "greeting": "Morning, Dheepak. Think first, type second.",
+  "problem": {
+    "frontend_id": "3863",
+    "title": "Minimum Operations to Sort a String",
+    "slug": "minimum-operations-to-sort-a-string",
+    "difficulty": "Medium",
+    "tags": [
+      "String"
+    ],
+    "url": "https://leetcode.com/problems/minimum-operations-to-sort-a-string/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 1,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2279891,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3886",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Analyze the conditions under which the string can be sorted in 0, 1, 2, or 3 operations based on the characters at the boundary positions.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3863-minimum-operations-to-sort-a-string.md",
+  "solution_path": "medium/3863-minimum-operations-to-sort-a-string.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 31,
+  "sent_at": "2026-10-21T12:08:32Z"
+}
