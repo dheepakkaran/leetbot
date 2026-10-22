@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "date": "2026-10-22",
+  "day": 12,
+  "greeting": "Here we go again, Dheepak",
+  "problem": {
+    "frontend_id": "3942",
+    "title": "Minimum Operations to Sort a Permutation",
+    "slug": "minimum-operations-to-sort-a-permutation",
+    "difficulty": "Medium",
+    "tags": [
+      "Array"
+    ],
+    "url": "https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 2,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2281047,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3863",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Analyze the array as a cyclic sequence: allowed operations preserve cyclic order up to reversal.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3942-minimum-operations-to-sort-a-permutation.md",
+  "solution_path": "medium/3942-minimum-operations-to-sort-a-permutation.md",
+  "model": "gemini-3.6-flash",
+  "message_id": 33,
+  "sent_at": "2026-10-22T12:11:33Z"
+}
