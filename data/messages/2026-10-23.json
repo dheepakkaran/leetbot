@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "date": "2026-10-23",
+  "day": 13,
+  "greeting": "Morning, Dheepak. Pattern of the day awaits.",
+  "problem": {
+    "frontend_id": "3644",
+    "title": "Maximum K to Sort a Permutation",
+    "slug": "maximum-k-to-sort-a-permutation",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "url": "https://leetcode.com/problems/maximum-k-to-sort-a-permutation/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 3,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2282201,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3942",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Consider which elements must be moved: any valid k must be a submask of every displaced element.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3644-maximum-k-to-sort-a-permutation.md",
+  "solution_path": "medium/3644-maximum-k-to-sort-a-permutation.md",
+  "model": "gemini-3.6-flash",
+  "message_id": 35,
+  "sent_at": "2026-10-23T12:10:05Z"
+}
