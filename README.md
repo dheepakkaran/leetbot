@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 12
-- **Solved:** 0/12 (0%)
-- **By difficulty:** Easy 0/3 · Medium 0/5 · Hard 0/4
+- **Bot days:** 13
+- **Solved:** 0/13 (0%)
+- **By difficulty:** Easy 0/3 · Medium 0/6 · Hard 0/4
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 12 | 2026-10-22 | [#3942 Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/) · [solution](medium/3942-minimum-operations-to-sort-a-permutation.md) | Medium | Python | ⏳ Pending |
+| 13 | 2026-10-23 | [#3644 Maximum K to Sort a Permutation](https://leetcode.com/problems/maximum-k-to-sort-a-permutation/) · [solution](medium/3644-maximum-k-to-sort-a-permutation.md) | Medium | Python | ⏳ Pending |
+| 12 | 2026-10-22 | [#3942 Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/) · [solution](medium/3942-minimum-operations-to-sort-a-permutation.md) | Medium | Python | ❌ Missed |
 | 11 | 2026-10-21 | [#3863 Minimum Operations to Sort a String](https://leetcode.com/problems/minimum-operations-to-sort-a-string/) · [solution](medium/3863-minimum-operations-to-sort-a-string.md) | Medium | Python | ❌ Missed |
 | 10 | 2026-10-20 | [#3886 Sum of Sortable Integers](https://leetcode.com/problems/sum-of-sortable-integers/) · [solution](hard/3886-sum-of-sortable-integers.md) | Hard | C++ | ❌ Missed |
 | 9 | 2026-10-19 | [#2089 Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) · [solution](easy/2089-find-target-indices-after-sorting-array.md) | Easy | C++ | ❌ Missed |
 | 8 | 2026-10-18 | [#1569 Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/) · [solution](hard/1569-number-of-ways-to-reorder-array-to-get-same-bst.md) | Hard | C++ | ❌ Missed |
 | 7 | 2026-10-17 | [#3551 Minimum Swaps to Sort by Digit Sum](https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/) · [solution](medium/3551-minimum-swaps-to-sort-by-digit-sum.md) | Medium | C++ | ❌ Missed |
-| 6 | 2026-10-16 | [#2916 Subarrays Distinct Element Sum of Squares II](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) · [solution](hard/2916-subarrays-distinct-element-sum-of-squares-ii.md) | Hard | C++ | ❌ Missed |
 
 <!-- PROGRESS:END -->
