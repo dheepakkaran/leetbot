@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "date": "2026-10-24",
+  "day": 14,
+  "greeting": "Fresh problem on the board, Dheepak",
+  "problem": {
+    "frontend_id": "2409",
+    "title": "Count Days Spent Together",
+    "slug": "count-days-spent-together",
+    "difficulty": "Easy",
+    "tags": [
+      "Math",
+      "String"
+    ],
+    "url": "https://leetcode.com/problems/count-days-spent-together/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 4,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2283225,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3644",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Convert dates into the day of the year (1-365) to reduce this to finding the intersection of two 1D intervals.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/easy/2409-count-days-spent-together.md",
+  "solution_path": "easy/2409-count-days-spent-together.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 37,
+  "sent_at": "2026-10-24T12:09:27Z"
+}
