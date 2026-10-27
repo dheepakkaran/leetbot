@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "date": "2026-10-27",
+  "day": 17,
+  "greeting": "Ready when you are, Dheepak",
+  "problem": {
+    "frontend_id": "3963",
+    "title": "Create Grid With Exactly One Path",
+    "slug": "create-grid-with-exactly-one-path",
+    "difficulty": "Easy",
+    "tags": [],
+    "url": "https://leetcode.com/problems/create-grid-with-exactly-one-path/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 7,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2286775,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3619",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Create a single simple path by making only the top row and rightmost column free, leaving all other cells blocked.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/easy/3963-create-grid-with-exactly-one-path.md",
+  "solution_path": "easy/3963-create-grid-with-exactly-one-path.md",
+  "model": "gemini-3.6-flash",
+  "message_id": 43,
+  "sent_at": "2026-10-27T12:08:25Z"
+}
