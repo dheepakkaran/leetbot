@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 17
-- **Solved:** 0/17 (0%)
-- **By difficulty:** Easy 0/5 · Medium 0/8 · Hard 0/4
+- **Bot days:** 18
+- **Solved:** 0/18 (0%)
+- **By difficulty:** Easy 0/5 · Medium 0/9 · Hard 0/4
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 17 | 2026-10-27 | [#3963 Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path/) · [solution](easy/3963-create-grid-with-exactly-one-path.md) | Easy | Python | ⏳ Pending |
+| 18 | 2026-10-28 | [#3882 Minimum XOR Path in a Grid](https://leetcode.com/problems/minimum-xor-path-in-a-grid/) · [solution](medium/3882-minimum-xor-path-in-a-grid.md) | Medium | Python | ⏳ Pending |
+| 17 | 2026-10-27 | [#3963 Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path/) · [solution](easy/3963-create-grid-with-exactly-one-path.md) | Easy | Python | ❌ Missed |
 | 16 | 2026-10-26 | [#3619 Count Islands With Total Value Divisible by K](https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/) · [solution](medium/3619-count-islands-with-total-value-divisible-by-k.md) | Medium | Python | ❌ Missed |
 | 15 | 2026-10-25 | [#1254 Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) · [solution](medium/1254-number-of-closed-islands.md) | Medium | Python | ❌ Missed |
 | 14 | 2026-10-24 | [#2409 Count Days Spent Together](https://leetcode.com/problems/count-days-spent-together/) · [solution](easy/2409-count-days-spent-together.md) | Easy | Python | ❌ Missed |
 | 13 | 2026-10-23 | [#3644 Maximum K to Sort a Permutation](https://leetcode.com/problems/maximum-k-to-sort-a-permutation/) · [solution](medium/3644-maximum-k-to-sort-a-permutation.md) | Medium | Python | ❌ Missed |
 | 12 | 2026-10-22 | [#3942 Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/) · [solution](medium/3942-minimum-operations-to-sort-a-permutation.md) | Medium | Python | ❌ Missed |
-| 11 | 2026-10-21 | [#3863 Minimum Operations to Sort a String](https://leetcode.com/problems/minimum-operations-to-sort-a-string/) · [solution](medium/3863-minimum-operations-to-sort-a-string.md) | Medium | Python | ❌ Missed |
 
 <!-- PROGRESS:END -->
