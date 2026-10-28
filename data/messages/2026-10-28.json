@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "date": "2026-10-28",
+  "day": 18,
+  "greeting": "Morning, Dheepak. Interviews are won on days like this.",
+  "problem": {
+    "frontend_id": "3882",
+    "title": "Minimum XOR Path in a Grid",
+    "slug": "minimum-xor-path-in-a-grid",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Dynamic Programming",
+      "Bit Manipulation",
+      "Matrix"
+    ],
+    "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 8,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2287942,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3963",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Since cell values are small (<= 1023), track all achievable path XOR values at each cell using a dynamic programming state.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3882-minimum-xor-path-in-a-grid.md",
+  "solution_path": "medium/3882-minimum-xor-path-in-a-grid.md",
+  "model": "gemini-3.6-flash",
+  "message_id": 45,
+  "sent_at": "2026-10-28T12:11:11Z"
+}
