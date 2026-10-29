@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "date": "2026-10-29",
+  "day": 19,
+  "greeting": "Another one, Dheepak",
+  "problem": {
+    "frontend_id": "3841",
+    "title": "Palindromic Path Queries in a Tree",
+    "slug": "palindromic-path-queries-in-a-tree",
+    "difficulty": "Hard",
+    "tags": [
+      "Array",
+      "String",
+      "Divide and Conquer",
+      "Bit Manipulation",
+      "Tree",
+      "Depth-First Search",
+      "Binary Indexed Tree",
+      "Segment Tree"
+    ],
+    "url": "https://leetcode.com/problems/palindromic-path-queries-in-a-tree/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 9,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2289037,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3882",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Convert character frequencies to 26-bit masks and use an Euler tour to map subtree updates to range operations on a BIT.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/hard/3841-palindromic-path-queries-in-a-tree.md",
+  "solution_path": "hard/3841-palindromic-path-queries-in-a-tree.md",
+  "model": "gemini-3.6-flash",
+  "message_id": 47,
+  "sent_at": "2026-10-29T12:14:08Z"
+}
