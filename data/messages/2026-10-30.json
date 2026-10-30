@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "date": "2026-10-30",
+  "day": 20,
+  "greeting": "Good morning, Dheepak. Brute force first, then optimize.",
+  "problem": {
+    "frontend_id": "3970",
+    "title": "Shortest Path With At Most K Consecutive Identical Characters",
+    "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+    "difficulty": "Medium",
+    "tags": [
+      "String",
+      "Graph Theory",
+      "Heap (Priority Queue)",
+      "Shortest Path"
+    ],
+    "url": "https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "python",
+    "display": "Python",
+    "k": 10,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2290129,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3841",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": false,
+  "missed": true,
+  "recap": null,
+  "variant": "missed",
+  "hint": "Model the state as (node, consecutive_count) and run Dijkstra's algorithm, pruning states with worse consecutive counts.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/3970-shortest-path-with-at-most-k-consecutive-identical-characters.md",
+  "solution_path": "medium/3970-shortest-path-with-at-most-k-consecutive-identical-characters.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 49,
+  "sent_at": "2026-10-30T12:10:00Z"
+}
