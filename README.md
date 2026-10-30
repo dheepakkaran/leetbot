@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 19
-- **Solved:** 0/19 (0%)
-- **By difficulty:** Easy 0/5 · Medium 0/9 · Hard 0/5
+- **Bot days:** 20
+- **Solved:** 0/20 (0%)
+- **By difficulty:** Easy 0/5 · Medium 0/10 · Hard 0/5
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 19 | 2026-10-29 | [#3841 Palindromic Path Queries in a Tree](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/) · [solution](hard/3841-palindromic-path-queries-in-a-tree.md) | Hard | Python | ⏳ Pending |
+| 20 | 2026-10-30 | [#3970 Shortest Path With At Most K Consecutive Identical Characters](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/) · [solution](medium/3970-shortest-path-with-at-most-k-consecutive-identical-characters.md) | Medium | Python | ⏳ Pending |
+| 19 | 2026-10-29 | [#3841 Palindromic Path Queries in a Tree](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/) · [solution](hard/3841-palindromic-path-queries-in-a-tree.md) | Hard | Python | ❌ Missed |
 | 18 | 2026-10-28 | [#3882 Minimum XOR Path in a Grid](https://leetcode.com/problems/minimum-xor-path-in-a-grid/) · [solution](medium/3882-minimum-xor-path-in-a-grid.md) | Medium | Python | ❌ Missed |
 | 17 | 2026-10-27 | [#3963 Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path/) · [solution](easy/3963-create-grid-with-exactly-one-path.md) | Easy | Python | ❌ Missed |
 | 16 | 2026-10-26 | [#3619 Count Islands With Total Value Divisible by K](https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/) · [solution](medium/3619-count-islands-with-total-value-divisible-by-k.md) | Medium | Python | ❌ Missed |
 | 15 | 2026-10-25 | [#1254 Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) · [solution](medium/1254-number-of-closed-islands.md) | Medium | Python | ❌ Missed |
 | 14 | 2026-10-24 | [#2409 Count Days Spent Together](https://leetcode.com/problems/count-days-spent-together/) · [solution](easy/2409-count-days-spent-together.md) | Easy | Python | ❌ Missed |
-| 13 | 2026-10-23 | [#3644 Maximum K to Sort a Permutation](https://leetcode.com/problems/maximum-k-to-sort-a-permutation/) · [solution](medium/3644-maximum-k-to-sort-a-permutation.md) | Medium | Python | ❌ Missed |
 
 <!-- PROGRESS:END -->
