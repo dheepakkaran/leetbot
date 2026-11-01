@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "day": 22,
+  "greeting": "Hey Dheepak, your daily rep is here",
+  "problem": {
+    "frontend_id": "453",
+    "title": "Minimum Moves to Equal Array Elements",
+    "slug": "minimum-moves-to-equal-array-elements",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Math"
+    ],
+    "url": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "java",
+    "display": "Java",
+    "k": 2,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2292108,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "3665",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": true,
+  "missed": true,
+  "recap": {
+    "solved": 0,
+    "easy": 0,
+    "medium": 0,
+    "hard": 0,
+    "total": 67,
+    "total_delta": 0,
+    "rank_delta": 7651,
+    "fastest": null
+  },
+  "variant": "sunday",
+  "hint": "Consider the relative difference between elements: incrementing n - 1 elements by 1 is equivalent to decrementing 1 element by 1.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/0453-minimum-moves-to-equal-array-elements.md",
+  "solution_path": "medium/0453-minimum-moves-to-equal-array-elements.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 53,
+  "sent_at": "2026-11-01T13:09:53Z"
+}
