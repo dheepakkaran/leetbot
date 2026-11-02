@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 22
-- **Solved:** 0/22 (0%)
-- **By difficulty:** Easy 0/5 · Medium 0/12 · Hard 0/5
+- **Bot days:** 23
+- **Solved:** 0/23 (0%)
+- **By difficulty:** Easy 0/5 · Medium 0/13 · Hard 0/5
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 22 | 2026-11-01 | [#453 Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) · [solution](medium/0453-minimum-moves-to-equal-array-elements.md) | Medium | Java | ⏳ Pending |
+| 23 | 2026-11-02 | [#462 Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) · [solution](medium/0462-minimum-moves-to-equal-array-elements-ii.md) | Medium | Java | ⏳ Pending |
+| 22 | 2026-11-01 | [#453 Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) · [solution](medium/0453-minimum-moves-to-equal-array-elements.md) | Medium | Java | ❌ Missed |
 | 21 | 2026-10-31 | [#3665 Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count/) · [solution](medium/3665-twisted-mirror-path-count.md) | Medium | Java | ❌ Missed |
 | 20 | 2026-10-30 | [#3970 Shortest Path With At Most K Consecutive Identical Characters](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/) · [solution](medium/3970-shortest-path-with-at-most-k-consecutive-identical-characters.md) | Medium | Python | ❌ Missed |
 | 19 | 2026-10-29 | [#3841 Palindromic Path Queries in a Tree](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/) · [solution](hard/3841-palindromic-path-queries-in-a-tree.md) | Hard | Python | ❌ Missed |
 | 18 | 2026-10-28 | [#3882 Minimum XOR Path in a Grid](https://leetcode.com/problems/minimum-xor-path-in-a-grid/) · [solution](medium/3882-minimum-xor-path-in-a-grid.md) | Medium | Python | ❌ Missed |
 | 17 | 2026-10-27 | [#3963 Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path/) · [solution](easy/3963-create-grid-with-exactly-one-path.md) | Easy | Python | ❌ Missed |
-| 16 | 2026-10-26 | [#3619 Count Islands With Total Value Divisible by K](https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/) · [solution](medium/3619-count-islands-with-total-value-divisible-by-k.md) | Medium | Python | ❌ Missed |
 
 <!-- PROGRESS:END -->
