@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 25
-- **Solved:** 0/25 (0%)
-- **By difficulty:** Easy 0/6 · Medium 0/13 · Hard 0/6
+- **Bot days:** 26
+- **Solved:** 0/26 (0%)
+- **By difficulty:** Easy 0/7 · Medium 0/13 · Hard 0/6
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 25 | 2026-11-04 | [#3505 Minimum Operations to Make Elements Within K Subarrays Equal](https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/) · [solution](hard/3505-minimum-operations-to-make-elements-within-k-subarrays-equal.md) | Hard | Java | ⏳ Pending |
+| 26 | 2026-11-05 | [#1385 Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) | Easy | Java | ⏳ Pending |
+| 25 | 2026-11-04 | [#3505 Minimum Operations to Make Elements Within K Subarrays Equal](https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/) · [solution](hard/3505-minimum-operations-to-make-elements-within-k-subarrays-equal.md) | Hard | Java | ❌ Missed |
 | 24 | 2026-11-03 | [#3736 Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) · [solution](easy/3736-minimum-moves-to-equal-array-elements-iii.md) | Easy | Java | ❌ Missed |
 | 23 | 2026-11-02 | [#462 Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/) · [solution](medium/0462-minimum-moves-to-equal-array-elements-ii.md) | Medium | Java | ❌ Missed |
 | 22 | 2026-11-01 | [#453 Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) · [solution](medium/0453-minimum-moves-to-equal-array-elements.md) | Medium | Java | ❌ Missed |
 | 21 | 2026-10-31 | [#3665 Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count/) · [solution](medium/3665-twisted-mirror-path-count.md) | Medium | Java | ❌ Missed |
 | 20 | 2026-10-30 | [#3970 Shortest Path With At Most K Consecutive Identical Characters](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/) · [solution](medium/3970-shortest-path-with-at-most-k-consecutive-identical-characters.md) | Medium | Python | ❌ Missed |
-| 19 | 2026-10-29 | [#3841 Palindromic Path Queries in a Tree](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/) · [solution](hard/3841-palindromic-path-queries-in-a-tree.md) | Hard | Python | ❌ Missed |
 
 <!-- PROGRESS:END -->
