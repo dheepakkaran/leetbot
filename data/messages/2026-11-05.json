@@ -44,11 +44,11 @@
   "sunday": false,
   "missed": true,
   "recap": null,
-  "variant": "no_solution",
-  "hint": null,
-  "solution_url": null,
-  "solution_path": null,
-  "model": "none",
+  "variant": "missed",
+  "hint": "Check if any element in arr2 falls within the range [x - d, x + d] for each x in arr1.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/easy/1385-find-the-distance-value-between-two-arrays.md",
+  "solution_path": "easy/1385-find-the-distance-value-between-two-arrays.md",
+  "model": "gemini-3.6-flash",
   "message_id": 61,
   "sent_at": "2026-11-05T13:11:43Z"
 }
