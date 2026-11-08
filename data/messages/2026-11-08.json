@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "date": "2026-11-08",
+  "day": 29,
+  "greeting": "Morning, Dheepak. Let's get it done early.",
+  "problem": {
+    "frontend_id": "1267",
+    "title": "Count Servers that Communicate",
+    "slug": "count-servers-that-communicate",
+    "difficulty": "Medium",
+    "tags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union-Find",
+      "Matrix",
+      "Counting"
+    ],
+    "url": "https://leetcode.com/problems/count-servers-that-communicate/",
+    "source": "daily"
+  },
+  "language": {
+    "key": "java",
+    "display": "Java",
+    "k": 9,
+    "block_size": 10
+  },
+  "stats": {
+    "total": 67,
+    "easy": 37,
+    "medium": 30,
+    "hard": 0,
+    "ranking": 2298989,
+    "active_days": 4,
+    "streak": 0
+  },
+  "week": {
+    "solved": 0,
+    "bar": "▱▱▱▱▱▱▱"
+  },
+  "yesterday": {
+    "frontend_id": "1882",
+    "status": "unsolved"
+  },
+  "milestones": [],
+  "sunday": true,
+  "missed": true,
+  "recap": {
+    "solved": 0,
+    "easy": 0,
+    "medium": 0,
+    "hard": 0,
+    "total": 67,
+    "total_delta": 0,
+    "rank_delta": 6881,
+    "fastest": null
+  },
+  "variant": "sunday",
+  "hint": "Count the total number of servers in each row and each column first.",
+  "solution_url": "https://github.com/dheepakkaran/leetbot/blob/main/medium/1267-count-servers-that-communicate.md",
+  "solution_path": "medium/1267-count-servers-that-communicate.md",
+  "model": "gemini-3.8-flash",
+  "message_id": 67,
+  "sent_at": "2026-11-08T13:09:02Z"
+}
