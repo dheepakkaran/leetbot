@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 30
-- **Solved:** 0/30 (0%)
-- **By difficulty:** Easy 0/7 · Medium 0/16 · Hard 0/7
+- **Bot days:** 31
+- **Solved:** 0/31 (0%)
+- **By difficulty:** Easy 0/7 · Medium 0/17 · Hard 0/7
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 30 | 2026-11-09 | [#1606 Find Servers That Handled Most Number of Requests](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) · [solution](hard/1606-find-servers-that-handled-most-number-of-requests.md) | Hard | Java | ⏳ Pending |
+| 31 | 2026-11-10 | [#3693 Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/) · [solution](medium/3693-climbing-stairs-ii.md) | Medium | Java | ⏳ Pending |
+| 30 | 2026-11-09 | [#1606 Find Servers That Handled Most Number of Requests](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) · [solution](hard/1606-find-servers-that-handled-most-number-of-requests.md) | Hard | Java | ❌ Missed |
 | 29 | 2026-11-08 | [#1267 Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) · [solution](medium/1267-count-servers-that-communicate.md) | Medium | Java | ❌ Missed |
 | 28 | 2026-11-07 | [#1882 Process Tasks Using Servers](https://leetcode.com/problems/process-tasks-using-servers/) · [solution](medium/1882-process-tasks-using-servers.md) | Medium | Java | ❌ Missed |
 | 27 | 2026-11-06 | [#2747 Count Zero Request Servers](https://leetcode.com/problems/count-zero-request-servers/) · [solution](medium/2747-count-zero-request-servers.md) | Medium | Java | ❌ Missed |
 | 26 | 2026-11-05 | [#1385 Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) · [solution](easy/1385-find-the-distance-value-between-two-arrays.md) | Easy | Java | ❌ Missed |
 | 25 | 2026-11-04 | [#3505 Minimum Operations to Make Elements Within K Subarrays Equal](https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/) · [solution](hard/3505-minimum-operations-to-make-elements-within-k-subarrays-equal.md) | Hard | Java | ❌ Missed |
-| 24 | 2026-11-03 | [#3736 Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/) · [solution](easy/3736-minimum-moves-to-equal-array-elements-iii.md) | Easy | Java | ❌ Missed |
 
 <!-- PROGRESS:END -->
