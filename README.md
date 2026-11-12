@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 32
-- **Solved:** 0/32 (0%)
-- **By difficulty:** Easy 0/7 · Medium 0/18 · Hard 0/7
+- **Bot days:** 33
+- **Solved:** 0/33 (0%)
+- **By difficulty:** Easy 0/8 · Medium 0/18 · Hard 0/7
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 32 | 2026-11-11 | [#3789 Minimum Cost to Acquire Required Items](https://leetcode.com/problems/minimum-cost-to-acquire-required-items/) · [solution](medium/3789-minimum-cost-to-acquire-required-items.md) | Medium | Java | ⏳ Pending |
+| 33 | 2026-11-12 | [#3105 Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) · [solution](easy/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.md) | Easy | Java | ⏳ Pending |
+| 32 | 2026-11-11 | [#3789 Minimum Cost to Acquire Required Items](https://leetcode.com/problems/minimum-cost-to-acquire-required-items/) · [solution](medium/3789-minimum-cost-to-acquire-required-items.md) | Medium | Java | ❌ Missed |
 | 31 | 2026-11-10 | [#3693 Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/) · [solution](medium/3693-climbing-stairs-ii.md) | Medium | Java | ❌ Missed |
 | 30 | 2026-11-09 | [#1606 Find Servers That Handled Most Number of Requests](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) · [solution](hard/1606-find-servers-that-handled-most-number-of-requests.md) | Hard | Java | ❌ Missed |
 | 29 | 2026-11-08 | [#1267 Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) · [solution](medium/1267-count-servers-that-communicate.md) | Medium | Java | ❌ Missed |
 | 28 | 2026-11-07 | [#1882 Process Tasks Using Servers](https://leetcode.com/problems/process-tasks-using-servers/) · [solution](medium/1882-process-tasks-using-servers.md) | Medium | Java | ❌ Missed |
 | 27 | 2026-11-06 | [#2747 Count Zero Request Servers](https://leetcode.com/problems/count-zero-request-servers/) · [solution](medium/2747-count-zero-request-servers.md) | Medium | Java | ❌ Missed |
-| 26 | 2026-11-05 | [#1385 Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) · [solution](easy/1385-find-the-distance-value-between-two-arrays.md) | Easy | Java | ❌ Missed |
 
 <!-- PROGRESS:END -->
