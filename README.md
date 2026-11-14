@@ -156,19 +156,19 @@ Problem statements belong to LeetCode. This repo stores only problem links, meta
 
 ## Progress
 
-- **Bot days:** 34
-- **Solved:** 0/34 (0%)
-- **By difficulty:** Easy 0/8 · Medium 0/18 · Hard 0/8
+- **Bot days:** 35
+- **Solved:** 0/35 (0%)
+- **By difficulty:** Easy 0/9 · Medium 0/18 · Hard 0/8
 - **Current LeetCode streak:** 0 days
 
 | Day | Date | Problem | Difficulty | Language | Status |
 |---:|---|---|---|---|---|
-| 34 | 2026-11-13 | [#3420 Count Non-Decreasing Subarrays After K Operations](https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/) · [solution](hard/3420-count-non-decreasing-subarrays-after-k-operations.md) | Hard | Java | ⏳ Pending |
+| 35 | 2026-11-14 | [#3364 Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray/) · [solution](easy/3364-minimum-positive-sum-subarray.md) | Easy | Java | ⏳ Pending |
+| 34 | 2026-11-13 | [#3420 Count Non-Decreasing Subarrays After K Operations](https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/) · [solution](hard/3420-count-non-decreasing-subarrays-after-k-operations.md) | Hard | Java | ❌ Missed |
 | 33 | 2026-11-12 | [#3105 Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) · [solution](easy/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.md) | Easy | Java | ❌ Missed |
 | 32 | 2026-11-11 | [#3789 Minimum Cost to Acquire Required Items](https://leetcode.com/problems/minimum-cost-to-acquire-required-items/) · [solution](medium/3789-minimum-cost-to-acquire-required-items.md) | Medium | Java | ❌ Missed |
 | 31 | 2026-11-10 | [#3693 Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/) · [solution](medium/3693-climbing-stairs-ii.md) | Medium | Java | ❌ Missed |
 | 30 | 2026-11-09 | [#1606 Find Servers That Handled Most Number of Requests](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) · [solution](hard/1606-find-servers-that-handled-most-number-of-requests.md) | Hard | Java | ❌ Missed |
 | 29 | 2026-11-08 | [#1267 Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) · [solution](medium/1267-count-servers-that-communicate.md) | Medium | Java | ❌ Missed |
-| 28 | 2026-11-07 | [#1882 Process Tasks Using Servers](https://leetcode.com/problems/process-tasks-using-servers/) · [solution](medium/1882-process-tasks-using-servers.md) | Medium | Java | ❌ Missed |
 
 <!-- PROGRESS:END -->
